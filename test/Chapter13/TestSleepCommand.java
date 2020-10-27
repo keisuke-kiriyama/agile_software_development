@@ -3,6 +3,8 @@ package Chapter13;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class TestSleepCommand extends TestCase {
     public static void main(String[] args) {
         TestRunner.main(new String[]{"TestSleepCommand"});
@@ -22,8 +24,8 @@ public class TestSleepCommand extends TestCase {
         e.run();
         long stop = System.currentTimeMillis();
         long sleepTime = (stop - start);
-        assert("SleepTime " + sleepTime + " expected > 1000", sleepTime > 1000);
-        assert("SleepTime " + sleepTime + " expected < 1100", sleepTime > 1100);
-        assert("Command Executed", commandExecuted);
+        assertThat("SleepTime " + sleepTime + " expected > 1000", sleepTime > 1000);
+        assertThat("SleepTime " + sleepTime + " expected < 1100", sleepTime > 1100);
+        assertThat("Command Executed", commandExecuted);
     }
 }
