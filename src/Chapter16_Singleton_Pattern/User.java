@@ -1,2 +1,4 @@
-package Chapter16_Singleton_Pattern;public class User {
+package Chapter16_Singleton_Pattern;
+
+public class User {
 }
