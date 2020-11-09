@@ -1,4 +1,4 @@
-package Chapter13;
+package Chapter13_Command_Pattern;
 
 public class DelayedTyper implements Command {
     private final long itsDelay;

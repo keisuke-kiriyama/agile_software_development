@@ -1,6 +1,4 @@
-package Chapter13;
-
-import java.rmi.server.RMIServerSocketFactory;
+package Chapter13_Command_Pattern;
 
 public class SleepCommand  implements  Command {
     private Command wakeupCommand = null;

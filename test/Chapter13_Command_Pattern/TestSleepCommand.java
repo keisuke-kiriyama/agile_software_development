@@ -1,4 +1,4 @@
-package Chapter13;
+package Chapter13_Command_Pattern;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
