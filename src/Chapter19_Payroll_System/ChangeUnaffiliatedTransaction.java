@@ -13,6 +13,10 @@ public class ChangeUnaffiliatedTransaction extends ChangeAffiliationTransaction 
     void RecordMembership(Employee e) {
         Affiliation af = e.GetAffiliation();
         if (af instanceof UnionAffiliation) {
+            /*
+            ChangeUnAffiliatedTransactionがUnionAffiliationのことを
+            知らないといけないため、満足できる設計ではない。
+             */
             UnionAffiliation uf = (UnionAffiliation) af;
             int memberId = uf.GetMemberId();
             PayrollDatabase.RemoveUnionMember(memberId);
